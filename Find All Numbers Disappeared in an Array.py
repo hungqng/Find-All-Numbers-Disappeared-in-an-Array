@@ -13,3 +13,9 @@ class Solution:
             if n > 0:
                 res.append(i + 1)
         return res
+
+        # Solution 2
+        for num in nums:
+            index = abs(num) - 1
+            nums[index] = -abs(nums[index])
+        return [i + 1 for i, num in enumerate(nums) if num > 0]
